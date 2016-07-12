@@ -1,0 +1,5 @@
+D:\Prog\TDDDay2\PotterShoppingCart.Library\bin\Debug\PotterShoppingCart.Library.dll
+D:\Prog\TDDDay2\PotterShoppingCart.Library\bin\Debug\PotterShoppingCart.Library.pdb
+D:\Prog\TDDDay2\PotterShoppingCart.Library\obj\Debug\PotterShoppingCart.Library.csprojResolveAssemblyReference.cache
+D:\Prog\TDDDay2\PotterShoppingCart.Library\obj\Debug\PotterShoppingCart.Library.dll
+D:\Prog\TDDDay2\PotterShoppingCart.Library\obj\Debug\PotterShoppingCart.Library.pdb

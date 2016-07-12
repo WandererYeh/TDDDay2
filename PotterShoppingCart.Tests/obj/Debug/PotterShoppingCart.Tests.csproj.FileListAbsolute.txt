@@ -4,3 +4,5 @@ D:\Prog\TDDDay2\PotterShoppingCart.Tests\bin\Debug\Microsoft.VisualStudio.Qualit
 D:\Prog\TDDDay2\PotterShoppingCart.Tests\obj\Debug\PotterShoppingCart.Tests.csprojResolveAssemblyReference.cache
 D:\Prog\TDDDay2\PotterShoppingCart.Tests\obj\Debug\PotterShoppingCart.Tests.dll
 D:\Prog\TDDDay2\PotterShoppingCart.Tests\obj\Debug\PotterShoppingCart.Tests.pdb
+D:\Prog\TDDDay2\PotterShoppingCart.Tests\bin\Debug\PotterShoppingCart.Library.dll
+D:\Prog\TDDDay2\PotterShoppingCart.Tests\bin\Debug\PotterShoppingCart.Library.pdb
