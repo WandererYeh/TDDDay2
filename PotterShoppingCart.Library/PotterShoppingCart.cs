@@ -8,8 +8,10 @@ namespace PotterShoppingCart.Library
 {
     public class PotterShoppingCart
     {
-        public int CalculateOrderSum(List<Order> orders) {
-            int sum = 0;
+        Dictionary<int, int> discounts = new Dictionary<int, int> { { 1, 0 }, { 2, 5 }, { 3, 10 }, { 4, 20 }, { 5, 25 } };
+
+        public double CalculateOrderSum(List<Order> orders) {
+            double sum = 0;
 
             var orderList = (
                 from order in orders
@@ -21,6 +23,10 @@ namespace PotterShoppingCart.Library
             {
                 sum += v.Price;
             }
+
+            int iDistinctCtr = orderList.Count();       //有幾種不同的種類
+            int iDiscount = discounts[iDistinctCtr];    //取出折扣率
+            sum = sum * ((100 - iDiscount) * 1.0 / 100);
 
             return sum;
         }

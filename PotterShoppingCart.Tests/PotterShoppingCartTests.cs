@@ -21,5 +21,19 @@ namespace PotterShoppingCart.Tests
             var actual = target.CalculateOrderSum(orders);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void CountOrderSumTest_Buy_One_Book1_One_Book2_Should_Be_190()
+        {
+            var orders = new List<Order> {
+                new Order { Name = "Book1", Price = 100, Qty = 1 },
+                new Order { Name = "Book2", Price = 100, Qty = 1 }
+            };
+
+            var target = new PotterShoppingCart.Library.PotterShoppingCart();
+            var expected = 190;
+            var actual = target.CalculateOrderSum(orders);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
