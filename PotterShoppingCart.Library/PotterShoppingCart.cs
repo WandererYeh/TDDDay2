@@ -28,6 +28,23 @@ namespace PotterShoppingCart.Library
             int iDiscount = discounts[iDistinctCtr];    //取出折扣率
             sum = sum * ((100 - iDiscount) * 1.0 / 100);
 
+            orderList = (
+                from order in orders
+                group order by new { order.Name, order.Price } into g
+                where g.Sum(order => order.Qty) > 1
+                select new Order { Name = g.Key.Name, Price = g.Key.Price, Qty = g.Sum(order => order.Qty) }
+            ).ToList();
+
+            iDistinctCtr = orderList.Count();
+            iDiscount = discounts[iDistinctCtr];
+            double sumQtyGreatThan2 = 0;
+            foreach (var v in orderList)
+            {
+                sumQtyGreatThan2 += v.Price;
+            }
+            sumQtyGreatThan2 = sumQtyGreatThan2 * ((100 - iDiscount) * 1.0 / 100);
+            sum += sumQtyGreatThan2;
+
             return sum;
         }
     }
